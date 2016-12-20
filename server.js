@@ -49,6 +49,7 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 //=========================================================
 
 var bot = new builder.UniversalBot(connector, function (session) {
+        console.log('hello')
         session.send("Hello... I'm a testing bot.");
         session.beginDialog('go');
 });
@@ -62,6 +63,7 @@ var bot = new builder.UniversalBot(connector, function (session) {
 bot.dialog('go', [
     function(session) {
         builder.Prompts.text(session, "TYPE SOMETHING");
+        console.log('hello')
     },
     function(session, results) {
         callCogService(results.response, function(error, response, body) {
