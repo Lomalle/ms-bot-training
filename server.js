@@ -82,14 +82,13 @@ var callCogService = function _callCogService(content, callback) {
     console.log('hello')
     // This example is for the Vision API OCR
     var options = {
-        method: 'POST',
+        
         url: config.CONFIGURATIONS.EMOTION_SERVICE.API_URL + "",
         headers: {
             'ocp-apim-subscription-key': config.CONFIGURATIONS.EMOTION_SERVICE.API_KEY,
             'content-type': 'application/json'
         },
-        body: {url: content},
-        json: true
+        
     };
 
     request(options, callback);
