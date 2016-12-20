@@ -79,7 +79,6 @@ bot.dialog('go', [
 var request = require("request");
 
 var callCogService = function _callCogService(content, callback) {
-    console.log('hello')
     // This example is for the Vision API OCR
     var options = {
         
