@@ -61,7 +61,7 @@ var bot = new builder.UniversalBot(connector, function (session) {
 
 bot.dialog('go', [
     function(session) {
-        builder.Prompts.text(session, "Paste a url link to an image here.");
+        builder.Prompts.text(session, "TYPE SOMETHING");
     },
     function(session, results) {
         callCogService(results.response, function(error, response, body) {
@@ -83,9 +83,9 @@ var callCogService = function _callCogService(content, callback) {
     // This example is for the Vision API OCR
     var options = {
         method: 'POST',
-        url: config.CONFIGURATIONS.COMPUTER_VISION_SERVICE.API_URL + "ocr/",
+        url: config.CONFIGURATIONS.EMOTION_SERVICE.API_URL + "ocr/",
         headers: {
-            'ocp-apim-subscription-key': config.CONFIGURATIONS.COMPUTER_VISION_SERVICE.API_KEY,
+            'ocp-apim-subscription-key': config.CONFIGURATIONS.EMOTION_SERVICE.API_KEY,
             'content-type': 'application/json'
         },
         body: {url: content},
