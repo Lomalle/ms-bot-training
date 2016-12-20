@@ -66,8 +66,7 @@ bot.dialog('go', [
     },
     function(session, results) {
         callCogService(results.response, function(error, response, body) {
-            console.log('hello')
-            session.send('hello');
+            session.send(body);
             session.endDialogWithResult(results);
         })
     }
@@ -80,11 +79,11 @@ bot.dialog('go', [
 var request = require("request");
 
 var callCogService = function _callCogService(content, callback) {
-
+    console.log('hello')
     // This example is for the Vision API OCR
     var options = {
         method: 'POST',
-        url: config.CONFIGURATIONS.EMOTION_SERVICE.API_URL + "ocr/",
+        url: config.CONFIGURATIONS.EMOTION_SERVICE.API_URL + "",
         headers: {
             'ocp-apim-subscription-key': config.CONFIGURATIONS.EMOTION_SERVICE.API_KEY,
             'content-type': 'application/json'
