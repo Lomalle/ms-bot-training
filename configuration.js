@@ -5,8 +5,8 @@ var _config = {
     },
 
     EMOTION_SERVICE: {
-        API_URL: 'https://api.projectoxford.ai/emotion/v1.0/recognize/',
-        API_KEY: 'XXXXXXXXXXXXXXXXXXXXXXXXXXX'
+        API_URL: 'https://api.projectoxford.ai/emotion/v1.0/recognize',
+        API_KEY: '76ff4180283f4642bdf67f485eb351b8'
     },
     COMPUTER_VISION_SERVICE: {
         API_URL: "https://api.projectoxford.ai/vision/v1.0/",
