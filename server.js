@@ -66,8 +66,7 @@ bot.dialog('go', [
     },
     function(session, results) {
         callCogService(results.response, function(error, response, body) {
-            console.log(body);
-            //session.send(body);
+            console.log('hello')
             session.send('hello');
             session.endDialogWithResult(results);
         })
