@@ -63,13 +63,12 @@ var bot = new builder.UniversalBot(connector, function (session) {
 bot.dialog('go', [
     function(session) {
         builder.Prompts.text(session, "TYPE SOMETHING");
-        session.send('hello')
     },
     function(session, results) {
         callCogService(results.response, function(error, response, body) {
             console.log(body);
-            session.send(body);
-            session.endDialogWithResult(results + "hello");
+            //session.send(body);
+            session.endDialogWithResult('hello');
         })
     }
 ]);
